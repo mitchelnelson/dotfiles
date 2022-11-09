@@ -1,0 +1,263 @@
+{
+    ////////////////////////////////// Colors //////////////////////////////////
+
+    "workbench.colorTheme": "Community Material Theme Ocean High Contrast",
+
+    ////////////////////////////////// Format //////////////////////////////////
+
+    "clang-format.style": "{BasedOnStyle: Chromium, IndentWidth: 4, AlignTrailingComments: true, BraceWrapping: {AfterFunction: false}}",
+    "[c]": {"editor.defaultFormatter": "xaver.clang-format"},
+    "[json]": {"editor.formatOnSave": false},
+
+    ////////////////////////////////// Editor //////////////////////////////////
+    
+    "editor.rulers": [80],
+    "editor.wordWrapColumn": 81,
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.smoothScrolling": true,
+
+    ///////////////////////////////// Terminal /////////////////////////////////
+
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font, FuraMono NF, 'PowerlineSymbols', monospace",
+    "terminal.integrated.minimumContrastRatio": 1, // for arrows in Powerline
+    "terminal.integrated.shellIntegration.enabled": true,
+    "terminal.integrated.lineHeight": 1.0,
+    "terminal.integrated.fontSize": 14,
+
+    /////////////////////////////////// Git ////////////////////////////////////
+
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+
+    ///////////////////////////////// Explorer /////////////////////////////////
+    
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "explorer.sortOrder": "type",
+
+    ////////////////////////////////// Remote //////////////////////////////////
+
+    "remote.SSH.showLoginTerminal": false,
+    "remote.SSH.useLocalServer": false,
+    "remote.SSH.useFlock": true,
+    "remote.SSH.remotePlatform": {
+        "students.cs.macewan.ca": "linux"
+    },
+
+    ////////////////////////////////// Others //////////////////////////////////
+
+    "telemetry.telemetryLevel": "off",
+    "workbench.list.smoothScrolling": true,
+    "keyboard.dispatch": "keyCode",
+    "files.exclude": {"**/.*": true,},
+    "files.autoSave": "afterDelay",
+
+    ///////////////////////////////// Discord///////////////////////////////////
+
+    "vscord.app.name": "Visual Studio Code",
+    "vscord.status.image.small.idle.text": "im sleep",
+    "vscord.status.state.text.viewing": "Viewing {dir_name}",
+    "vscord.status.details.text.debugging": "Debugging in {dir_name}",
+    "vscord.status.details.text.viewing": "In {workspace}",
+    "vscord.status.details.text.editing": "In {workspace}/{dir_name}",
+    "vscord.status.state.text.editing": "editing {file_name}",
+
+    /////////////////////////////////CodeRunner/////////////////////////////////
+
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {"c": "cd $dir && gcc -Wall -Wextra -g -std=c99 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"},
+    "search.sortOrder": "type",
+
+    ////////////////////////////////////Vim/////////////////////////////////////
+
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>","f","f"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": ["<leader>","s"],
+            "commands": ["workbench.action.files.save"]
+        },
+        {
+            "before": ["<leader>","o"],
+            "commands": ["workbench.action.files.openFile"]
+        },
+        {
+            "before": ["<leader>","f","c"],
+            "commands": ["workbench.action.showCommands"]
+        },
+        {
+            "before": ["<leader>","n"],
+            "commands": ["workbench.action.files.newUntitledFile"]
+        },
+        {
+            "before": ["<leader>","b"],
+            "commands": ["workbench.action.tasks.build"]
+        },
+        {
+            "before": ["<leader>","d"],
+            "commands": ["workbench.action.debug.start"]
+        },
+        {
+            "before": ["<leader>","r","r"],
+            "commands": ["code-runner.run"]
+        },
+        {
+            "before": ["<leader>","q"],
+            "commands": ["workbench.action.closeActiveEditor"]
+        },
+        {
+            "before": [">"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<"],
+            "commands": ["editor.action.outdentLines"]
+        },
+        {
+            "before": ["<leader>","g"],
+            "commands": ["workbench.view.scm"]
+        },
+        {
+            "before": ["<leader>","x"],
+            "commands": ["workbench.view.extensions"]
+        },
+        {
+            "before": ["leader","e"],
+            "commands": ["workbench.view.explorer"]
+        },
+        {
+            "before": ["<leader>","l","r"],
+            "commands": ["editor.action.rename"]
+        },
+        {
+            "before": ["x"],
+            "after": ["\"","_","x"]
+        },
+        {
+            "before": ["<C-a>"],
+            "after": ["g", "g", "<S-V>", "G"]
+        },
+        {
+            "before": ["leader","h"],
+            "commands": ["workbench.action.splitEditorDown"]
+        },
+        {
+            "before": ["leader","v"],
+            "commands": ["workbench.action.splitEditorRight"]
+        },
+        {
+            "before": ["<C-k>"],
+            "after": ["2", "0", "k"]
+        },
+        {
+            "before": ["<C-j>"],
+            "after": ["2", "0", "j"]
+        },
+        {
+            "before": ["L"],
+            "after": ["$"]
+        },
+        {
+            "before": ["H"],
+            "after": ["^"]
+        },
+        {
+            "before": ["+"],
+            "after": ["<C-a>"]
+        },
+        {
+            "before": ["-"],
+            "after": ["<C-x>"]
+        },
+        {
+            "before": ["leader", "z"],
+            "commands": ["workbench.action.toggleZenMode"]
+        },
+        {
+            "before": ["<leader>","t"],
+            "commands": ["workbench.action.togglePanel"]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            // scroll virtual lines as well
+            "before": ["j"],
+            "after": ["g", "j"]
+        },
+        {
+            // scroll virtual lines as well
+            "before": ["k"],
+            "after": ["g", "k"]
+        },
+        {
+            // for quick scroll
+            "before": ["<C-j>"],
+            "after": ["2", "0", "j"]
+        },
+        {
+            // for quick scroll
+            "before": ["<C-k>"],
+            "after": ["2", "0", "k"]
+        },
+        {
+            // move lines down
+            "before": ["J"],
+            "commands": ["editor.action.moveLinesDownAction"],
+        },
+        {
+            //move lines up
+            "before": ["K"],
+            "commands": ["editor.action.moveLinesUpAction"],
+        },
+        {
+            // move cursor to EOL
+            "before": ["L"],
+            "after": ["$"]
+        },
+        {
+            // move cursor to front of line
+            "before": ["H"],
+            "after": ["^"]
+        },
+        {
+            // find file
+            "before": ["leader", "f", "f"],
+            "commands": ["workbench.action.quickOpen"],
+        },
+        {
+            "before": [">"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<"],
+            "commands": ["editor.action.outdentLines"]
+        }
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": ["j", "k"],
+            "after": ["<ESC>"]
+        }
+    ],
+    "workbench.editor.untitled.hint": "hidden",
+    "security.workspace.trust.untrustedFiles": "open",
+    "json.schemas": [],
+    "window.zoomLevel": 1
+}
