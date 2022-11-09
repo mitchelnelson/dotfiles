@@ -1,2 +1,2 @@
 # dotfiles
-With credit from the homie @postfen
+With credit to the homie @postfen for vim keybinds.
